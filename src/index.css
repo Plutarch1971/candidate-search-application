@@ -118,3 +118,13 @@ tbody tr:nth-child(odd) {
   width: 80vw;
   table-layout: fixed;
 }
+.search-container {
+  color: white;
+  width: 100%;
+  max-width: 480px; /* Adjust as needed for phone size */
+  height: 80%;
+  border: 1px solid white;
+  /* background: white; */
+  padding: 1em; /* Optional: Add padding for better spacing */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
