@@ -1,12 +1,20 @@
+const myTOKEN = import.meta.env.VITE_GITHUB_TOKEN;
+console.log(`VITE_GITHUB_TOKEN ${myTOKEN}` );
+if (!myTOKEN) {
+  throw new Error('VITE_GITHUB_TOKEN is not defined');
+}
+const baseUrl = import.meta.env.VITE_GITHUB_URL;
+
 const searchGithub = async () => {
   try {
     const start = Math.floor(Math.random() * 100000000) + 1;
     // console.log(import.meta.env);
     const response = await fetch(
-      `https://api.github.com/users?since=${start}`,
+      `${baseUrl}/users?since=${start}`,
+      // `https://api.github.com/users?since=${start}`,
       {
         headers: {
-          Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
+          Authorization: `Bearer ${myTOKEN}`,
         },
       }
     );
@@ -22,7 +30,8 @@ const searchGithub = async () => {
     return [];
   }
 };
-
+export {searchGithub};
+/*
 const searchGithubUser = async (username: string) => {
   try {
     const response = await fetch(`https://api.github.com/users/${username}`, {
@@ -39,6 +48,6 @@ const searchGithubUser = async (username: string) => {
     // console.log('an error occurred', err);
     return {};
   }
-};
+};*/
 
-export { searchGithub, searchGithubUser };
+//  export { searchGithub} ;/*searchGithubUser };*/
