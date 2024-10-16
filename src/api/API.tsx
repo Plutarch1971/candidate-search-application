@@ -30,8 +30,7 @@ const searchGithub = async () => {
     return [];
   }
 };
-export {searchGithub};
-/*
+
 const searchGithubUser = async (username: string) => {
   try {
     const response = await fetch(`https://api.github.com/users/${username}`, {
@@ -48,6 +47,6 @@ const searchGithubUser = async (username: string) => {
     // console.log('an error occurred', err);
     return {};
   }
-};*/
+};
 
-//  export { searchGithub} ;/*searchGithubUser };*/
+ export { searchGithub, searchGithubUser};

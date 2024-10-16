@@ -1,12 +1,12 @@
 interface Candidate {
     login: string;
-    name: string;
+    id: number;
     username:string;
     location: string;
-    avatar: string;
+    avatar_url: string;
     email: string;
     html_url: string;
-    company: string;
+    organizations_url: string;
     // Add other fields as necessary
 }
 

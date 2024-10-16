@@ -6,11 +6,11 @@ function CandidateSearch() {
   const [list, setList] = useState<Candidate[]>([]);
   const [current, setCurrent] = useState(0);
 
-  const nextCandidate = () => {
+  const saveCandidate = () => {
     setCurrent((prev) => (prev + 1) % list.length);
   };
 
-  const prevCandidate = () => {
+  const dropCandidate = () => {
     setCurrent((prev) => (prev - 1 + list.length) % list.length);
   };
 
@@ -33,14 +33,17 @@ function CandidateSearch() {
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <img src="/candidate_avatar.png" alt="Candidate Avatar" style={{ width: '100px', height: '100px' }} />
           </div>
-          <p>Login: {list[current]?.login}</p>
+          <p>Id: {list[current]?.id}</p>
+          <p>Name: {list[current]?.login}</p>
+          <p>Avatar: {list[current]?.avatar_url}</p>
           <p>Location: {list[current]?.location}</p>
           <p>Email: {list[current]?.email}</p>
           <p>html_url: {list[current]?.html_url}</p>
-          <p>Company: {list[current]?.company}</p>
+          <p>Company: {list[current]?.organizations_url}</p>
           <div>
-            <button onClick={prevCandidate}>Previous</button>
-            <button onClick={nextCandidate}>Next</button>
+            {/* <button onClick={prevCandidate}></button> */}
+            <button onClick={dropCandidate}>-</button>
+            <button onClick={saveCandidate}>+</button>
           </div>
         </div>
       </main>
