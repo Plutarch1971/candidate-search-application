@@ -1,6 +1,7 @@
 interface Candidate {
-    login: string;
+    login: string; //in response name appears in login
     id: number;
+    name: string;
     username:string;
     location: string;
     avatar_url: string;

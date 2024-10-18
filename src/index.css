@@ -128,3 +128,11 @@ tbody tr:nth-child(odd) {
   padding: 1em; /* Optional: Add padding for better spacing */
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
+.navbar {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+.navbar li{
+  margin: 10px;
+}
