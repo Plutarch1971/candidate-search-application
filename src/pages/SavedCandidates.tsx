@@ -17,16 +17,18 @@ const SavedCandidates: React.FC = () => { //Waht is React.FC
 
   return (
     <div>
-      <h1>Potential Candidates</h1>
+      <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Potential Candidates</h1>
       <table>
         <thead>
           <tr>
             <th>Avatar</th>
             <th>Id</th>
+            <th>Userame</th>
             <th>Name</th>
             <th>Location</th>
             <th>Email</th>
             <th>Company</th>
+            <th>Profile</th>
           </tr>
         </thead>
         <tbody>
@@ -35,6 +37,7 @@ const SavedCandidates: React.FC = () => { //Waht is React.FC
               <td><img src={candidate.avatar_url} alt="Avatar" width="50" /></td>
               <td>{candidate.id}</td>
               <td>{candidate.login}</td>
+              <td>{candidate.name}</td>
               <td>{candidate.location}</td>
               <td>{candidate.email}</td>
               <td>{candidate.organizations_url}</td>
@@ -43,7 +46,7 @@ const SavedCandidates: React.FC = () => { //Waht is React.FC
           ))}
         </tbody>
       </table>
-      <a href="/">Back to Candidate Search</a>
+      <a href="/">Back to Home</a>
     </div>
   );
 };

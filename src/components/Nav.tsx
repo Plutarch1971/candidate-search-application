@@ -6,8 +6,8 @@ const Nav: React.FC = () => {
     <div>
       <nav>
         <ul className='navbar'>
-        <li><Link to="/SavedCandidates">Potential Candidate</Link></li>
-        <li><Link to="/">Home</Link> </li>
+        <li><Link to="/SavedCandidates" aria-label="Potential Candidate">Potential Candidate</Link></li>
+        <li><Link to="/" aria-label="Home">Home</Link> </li>
         </ul>
       </nav>  
     </div>
