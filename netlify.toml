@@ -1,5 +1,10 @@
 [build]
-  node_version = "16.14.0"
-  publish = "dist"
-  command = "npm run build"
+  # Netlify configuration file
+[build]
+  command = "npm run build"       # Your build command
+  publish = "dist"               # Directory to publish after build
+  # functions = "pages"          # Directory for serverless functions (if applicable)
 
+[dev]
+  command = "npm run start"        # Command to run during development
+  publish = "dist"                # Directory for development output
