@@ -17,7 +17,7 @@ const SavedCandidates: React.FC = () => { //Waht is React.FC
 
   return (
     <div>
-      <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Potential Candidates</h1>
+      <h1>Potential Candidates</h1>
       <table>
         <thead>
           <tr>

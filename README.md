@@ -1,1 +1,2 @@
 This application will help employers to find potential candidates.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bc496e47-d625-48f9-8b8b-2208354d4b3b/deploy-status)](https://app.netlify.com/sites/frolicking-horse-712ef8/deploys)
