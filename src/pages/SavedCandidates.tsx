@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Candidate from '../interfaces/Candidate.interface';
 
-const SavedCandidates: React.FC = () => { //Waht is React.FC
+const SavedCandidates: React.FC = () => {
   const [savedCandidates, setSavedCandidates] = useState<Candidate[]>([]);
 
   useEffect(() => {

@@ -86,18 +86,47 @@ button:focus-visible {
     font-size: larger;
     line-height: normal;
   }
-  table, thead, tbody, tr, th, td {
-    display: block;
+
+  /* Add horizontal scrolling to the table */
+  table {
+    width: 100%;
+    display: block; /* Optional, for better scroll control */
+    overflow-x: auto;
+    border-collapse: collapse; /* Optional, to remove gaps between cells */
+  }
+
+  thead, tbody {
+    display: table; /* Keep thead and tbody as table parts */
     width: 100%;
   }
+
+  /* Optional: Stack the table rows */
   tr {
+    display: block; /* Stack each row vertically */
     margin-bottom: 1em;
   }
+
   th, td {
+    display: block; /* Stack each cell vertically */
     text-align: left;
     padding: 0.5em;
+    box-sizing: border-box;
+    width: 100%; /* Ensure each cell takes up full width */
+  }
+
+  /* Optional: Hide table headers for mobile and replace with labels */
+  th {
+    display: none;
+  }
+
+  td::before {
+    content: attr(data-label); /* Use data-label attribute for content */
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
   }
 }
+
 
 main {
   color: #fff;
